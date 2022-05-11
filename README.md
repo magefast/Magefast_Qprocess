@@ -33,3 +33,5 @@ https://blog.gaiterjones.com/magento-2-asynchronous-message-queue-management/
 https://blogs.perficient.com/2021/03/09/rabbitmq-integration-with-magento-2-4/
 <br>
 https://amasty.com/knowledge-base/how-to-use-rabbitmq-in-magento-2-plugins.html
+<br>
+https://inviqa.com/blog/magento-2-tutorial-message-queues
