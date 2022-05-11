@@ -7,13 +7,14 @@ SSH command for retrieve list of all configured Queue Message:
 <br>
 <code>bin/magento queue:consumers:list</code>
 
+SSH command for watch/listen Queue Messages:
+<br>
+<code>bin/magento queue:consumers:start -vvv qprocess.task</code>
+
 SSH command for add test Queue Message:
 <br>
 <code>bin/magento qprocess:test</code>
 
-SSH command for watch/listen Queue Messages:
-<br>
-<code>bin/magento queue:consumers:start -vvv qprocess.task</code>
 <br>
 <br>
 #### Service for Publish (add) Queue Message 
