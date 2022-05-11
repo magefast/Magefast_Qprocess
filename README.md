@@ -2,6 +2,11 @@
 
 ## Sample module how can add Queue Message and processing it.
 
+
+SSH command for retrieve list of all configured Queue Message:
+<br>
+<code>bin/magento queue:consumers:list</code>
+
 SSH command for add test Queue Message:
 <br>
 <code>bin/magento qprocess:test</code>
