@@ -2,5 +2,5 @@
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:noNamespaceSchemaLocation="urn:magento:framework-message-queue:etc/consumer.xsd">
     <consumer name="qprocess.task" queue="qprocess.task" connection="db"
-              handler="Magefast\Qprocess\Model\Customer\DeleteConsumer::processMessage"/>
+              handler="Magefast\Qprocess\Model\Task::processMessage"/>
 </config>

@@ -4,8 +4,7 @@
     <type name="Magento\Framework\Console\CommandListInterface">
         <arguments>
             <argument name="commands" xsi:type="array">
-                <item name="magefast_qprocess_qprocess" xsi:type="object">Magefast\Qprocess\Console\Command\Qprocess
-                </item>
+                <item name="magefast_qprocess_qprocess" xsi:type="object">Magefast\Qprocess\Console\Command\Qprocess</item>
             </argument>
         </arguments>
     </type>

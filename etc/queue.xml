@@ -7,6 +7,6 @@
 -->
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework-message-queue:etc/queue.xsd">
     <broker topic="qprocess.task" exchange="magento-db" type="db">
-        <queue name="qprocess.task" consumer="qprocess.task" consumerInstance="Magento\Framework\MessageQueue\Consumer" handler="Magefast\Qprocess\Model\Customer\DeleteConsumer::processMessage"/>
+        <queue name="qprocess.task" consumer="qprocess.task" consumerInstance="Magento\Framework\MessageQueue\Consumer" handler="Magefast\Qprocess\Model\Task::processMessage"/>
     </broker>
 </config>
