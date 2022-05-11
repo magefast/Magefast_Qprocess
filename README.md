@@ -17,3 +17,13 @@ SSH command for watch/listen Queue Messages:
 
 #### Method where processed Queue Message, here can(need) add custom logic for processing - add Event, Service etc.
 \Magefast\Qprocess\Model\Task::processMessage
+
+
+### Links
+https://devdocs.magento.com/guides/v2.4/config-guide/mq/manage-message-queues.html
+https://www.atwix.com/magento-2/getting-started-with-message-queues-in-magento/
+https://store.magenest.com/blog/create-a-message-queue-in-magento-2/
+https://webkul.com/blog/here-we-will-learn-how-to-configure-and-use-rabbitmq-in-magento-2-3/
+https://blog.gaiterjones.com/magento-2-asynchronous-message-queue-management/
+https://blogs.perficient.com/2021/03/09/rabbitmq-integration-with-magento-2-4/
+https://amasty.com/knowledge-base/how-to-use-rabbitmq-in-magento-2-plugins.html
