@@ -21,9 +21,15 @@ SSH command for watch/listen Queue Messages:
 
 ### Links
 https://devdocs.magento.com/guides/v2.4/config-guide/mq/manage-message-queues.html
+<br>
 https://www.atwix.com/magento-2/getting-started-with-message-queues-in-magento/
+<br>
 https://store.magenest.com/blog/create-a-message-queue-in-magento-2/
+<br>
 https://webkul.com/blog/here-we-will-learn-how-to-configure-and-use-rabbitmq-in-magento-2-3/
+<br>
 https://blog.gaiterjones.com/magento-2-asynchronous-message-queue-management/
+<br>
 https://blogs.perficient.com/2021/03/09/rabbitmq-integration-with-magento-2-4/
+<br>
 https://amasty.com/knowledge-base/how-to-use-rabbitmq-in-magento-2-plugins.html
