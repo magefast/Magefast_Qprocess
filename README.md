@@ -18,7 +18,7 @@ SSH command for watch/listen Queue Messages:
 #### Method where processed Queue Message, here can(need) add custom logic for processing - add Event, Service etc.
 \Magefast\Qprocess\Model\Task::processMessage
 
-
+<br><br>
 ### Links
 https://devdocs.magento.com/guides/v2.4/config-guide/mq/manage-message-queues.html
 <br>
