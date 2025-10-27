@@ -1,6 +1,6 @@
 {
   "name": "magefast/module-qprocess",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "minimum-stability": "dev",
   "description": "Magento module, Easy Add Task to Queue",
   "type": "magento2-module",
