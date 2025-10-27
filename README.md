@@ -1,4 +1,4 @@
-# Magefast_Qprocess. Magento module, Easy Add Task to Queue
+# Magefast_Qprocess. <br>Magento module, Easy Add Task to Queue
 
 ## Sample module how can add Queue Message and processing it.
 
@@ -29,17 +29,17 @@ SSH command for add test Queue Message:
 
 ## Sample: How To add Task to Queue with this Module Magefast_Qprocess
 
-1) For example in Observer Class for event `catalog_product_save_after` need add Task for Sync/Send SMS or Call to Externall services. Bellow sample of Observer Class
+1) For example in Observer Class for event `catalog_product_save_after` need add Task for Sync/Send SMS <br>or Call to Externall services. 
+   <br>Bellow sample of Observer Class
 
 <pre>
-namespace Strekoza\HTMLcacheR2\Observer;
+namespace Strekoza\Sample\Observer;
 
 use Magefast\Qprocess\Service\Add;
 use Magento\Catalog\Model\Product;
 use Magento\Framework\Event\Observer as EventObserver;
 use Magento\Framework\Event\ObserverInterface;
 use Magento\Framework\Serialize\Serializer\Json;
-use Strekoza\HTMLcacheR2\Service\Settings;
 
 class ProductUpdateObserver implements ObserverInterface
 {
@@ -67,7 +67,7 @@ class ProductUpdateObserver implements ObserverInterface
         $objectData['sku'] = $product->getSku();
 
         $jsonData = [
-            'type' => Settings::QUEUE_TYPE_NAME_PRODUCT,
+            'type' => 'custom_task_product',
             'data' => $objectData
         ];
 
@@ -78,11 +78,69 @@ class ProductUpdateObserver implements ObserverInterface
 }
 
 </pre>
-
-2) Add PHP Class for Processing of Task, that added before.
+<br>
+2) Add solution for Processing of Task, that added before.
    It will added with event `qprocess_task`.
    Bellow peace of code for `etc/events.xml`
-   
+
+```xml
+    <event name="qprocess_task">
+        <observer name="sample_qprocess_task" instance="Strekoza\Sample\Observer\QprocessTask"/>
+    </event>
+```
+
+   And Observer Class `QprocessTask`
+   <pre>
+namespace Strekoza\Sample\Observer;
+
+use Exception;
+use Magento\Framework\Event\Observer;
+use Magento\Framework\Event\ObserverInterface;
+use Magento\Framework\Serialize\Serializer\Json;
+
+class QprocessTask implements ObserverInterface
+{
+    private Json $json;
+
+    public function __construct(
+        Json $json
+    )
+    {
+        $this->json = $json;
+    }
+
+    public function execute(Observer $observer)
+    {
+        $object = $observer->getEvent()->getObject();
+
+        $data = $this->json->unserialize($object->getValue());
+
+        if (!is_array($data)) {
+            return;
+        }
+
+        if (!isset($data['type']) || !isset($data['data'])) {
+            $object->setResult(false);
+            return;
+        }
+
+        if ($data['type'] == 'custom_task_product') {
+            try {
+
+                $sku = $data['data']['sku'];
+                //@todo YOUR LOGIC HERE with $sku of Product
+
+                return;
+            } catch (Exception $e) {
+                return;
+            }
+        }
+    }
+}
+</pre>
+<br>
+3) Its All. Take a look, if class/file `Observer\QprocessTask` is changed, need also regenerate code.
+
 
 
 <br><br>
