@@ -30,7 +30,7 @@ SSH command for add test Queue Message:
 
 ## Sample: How To add Task to Queue with this Module Magefast_Qprocess
 
-1) For example in Observer Class for event `catalog_product_save_after` need add Task for Sync/Send SMS <br>or Call to Externall services. 
+1) For example in Observer Class for event `catalog_product_save_after` need add Task for Sync/Send SMS <br>or Call to External services. 
    <br>Bellow sample of Observer Class
 
 <pre>
