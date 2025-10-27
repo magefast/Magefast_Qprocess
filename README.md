@@ -79,6 +79,10 @@ class ProductUpdateObserver implements ObserverInterface
 
 </pre>
 
+2) Add PHP Class for Processing of Task, that added before.
+   It will added with event `qprocess_task`.
+   Bellow peace of code for `etc/events.xml`
+   
 
 
 <br><br>
