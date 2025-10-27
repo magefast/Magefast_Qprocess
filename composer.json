@@ -7,8 +7,12 @@
   "require": {
     "magento/framework": "*"
   },
-  "license": [
-    "Proprietary"
+  "license": "proprietary",
+  "authors": [
+    {
+      "name": "magefast",
+      "email": "magefast@gmail.com"
+    }
   ],
   "autoload": {
     "files": [
