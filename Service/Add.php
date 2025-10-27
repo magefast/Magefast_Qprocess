@@ -1,4 +1,7 @@
 <?php
+/**
+ * @author magefast@gmail.com www.magefast.com
+ */
 
 namespace Magefast\Qprocess\Service;
 
@@ -6,8 +9,6 @@ use Magento\Framework\MessageQueue\PublisherInterface;
 
 class Add
 {
-    const TOPIC_NAME = 'qprocess.task';
-
     /**
      * @var PublisherInterface
      */
@@ -24,8 +25,8 @@ class Add
     /**
      * @param string $value
      */
-    public function execute(string $value)
+    public function execute(string $topicName, string $value)
     {
-        $this->publisher->publish(self::TOPIC_NAME, $value);
+        $this->publisher->publish($topicName, $value);
     }
 }

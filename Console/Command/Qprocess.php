@@ -1,4 +1,7 @@
 <?php
+/**
+ * @author magefast@gmail.com www.magefast.com
+ */
 
 namespace Magefast\Qprocess\Console\Command;
 
@@ -23,7 +26,6 @@ class Qprocess extends Command
         $this->addService = $addService;
 
         parent::__construct($name);
-
     }
 
     /**
@@ -46,8 +48,9 @@ class Qprocess extends Command
      */
     protected function execute(InputInterface $input, OutputInterface $output): void
     {
-        $value = 'test' . uniqid();
-        $this->addService->execute($value);
+        $value = ['type' => 'sample', 'data' => ['client_name' => uniqid(), 'client_email' => uniqid(), 'client_phone' => uniqid()]];
+
+        $this->addService->execute('test' . uniqid(), json_encode($value));
         $output->writeln('<info>' . 'Added value: ' . $value . '</info>');
     }
 }
