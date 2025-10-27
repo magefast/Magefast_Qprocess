@@ -144,6 +144,10 @@ class QprocessTask implements ObserverInterface
 
 
 
+## Install With Composer
+
+`composer require magefast/module-qprocess`
+
 <br><br>
 ### Links
 https://devdocs.magento.com/guides/v2.4/config-guide/mq/manage-message-queues.html
