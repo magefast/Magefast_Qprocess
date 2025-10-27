@@ -3,30 +3,25 @@
 ## Sample module how can add Queue Message and processing it.
 
 
-SSH command for retrieve list of all configured Queue Message:
-<br>
+#### CLI command for retrieve list of all configured Queue Message:
 <code>bin/magento queue:consumers:list</code>
+<br><br>
 
-SSH command for watch/listen Queue Messages:
-<br>
+#### CLI command for watch/listen Queue Messages:
 <code>bin/magento queue:consumers:start -vvv qprocess.task</code>
+<br><br>
 
-SSH command for add test Queue Message:
-<br>
+### CLI command for add test Queue Message:
 <code>bin/magento qprocess:test</code>
-
-<br>
-<br>
+<br><br>
 
 #### Service for Publish (add) Queue Message 
 `\Magefast\Qprocess\Service\Add::execute`
-
+<br><br>
 
 #### Method where processed Queue Message, here can(need) add custom logic for processing - add Event, Service etc.
 `\Magefast\Qprocess\Model\Task::processMessage`
-
-
-<br>
+<br><br>
 
 ## Sample: How To add Task to Queue with this Module Magefast_Qprocess
 
